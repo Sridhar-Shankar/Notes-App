@@ -1,0 +1,21 @@
+.sidebar {
+  width: 25%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 28px;
+  text-align: center;
+  color: #000000;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  align-self: end;
+  margin: 20px;
+}

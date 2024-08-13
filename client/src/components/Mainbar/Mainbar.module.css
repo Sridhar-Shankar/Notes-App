@@ -1,0 +1,35 @@
+.mainbar {
+  background-color: #dae5f5;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 75%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.mainIcon {
+  width: 400px;
+  height: 200px;
+}
+
+.lockIcon {
+  width: 10px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #292929;
+  font-size: 14px;
+}
+
+span {
+  font-size: 12px;
+  margin-left: 5px;
+}
