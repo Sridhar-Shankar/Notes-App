@@ -11,11 +11,18 @@
   font-size: 28px;
   text-align: center;
   color: #000000;
+  position: sticky;
 }
+
+/* .notesGroup {
+  overflow-y: scroll;
+} */
 
 .icon {
   width: 60px;
   height: 60px;
   align-self: end;
   margin: 20px;
+  position: sticky;
+  cursor: pointer;
 }
