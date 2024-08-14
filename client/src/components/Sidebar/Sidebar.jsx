@@ -1,21 +1,14 @@
-import React, { useContext, useState } from "react";
-import plusIcon from "../../assets/plusIcon.png";
-import styles from "./Sidebar.module.css";
-import Modal from "../Modal/Modal";
-import AppContext from "../../context/AppContext";
+import React, { useContext, useState } from 'react';
+import AppContext from '../../context/AppContext';
+import Modal from '../Modal/Modal';
+import plusIcon from '../../assets/plusIcon.png';
+import styles from './Sidebar.module.css';
 
 function Sidebar() {
   const { groups, addGroup, selectGroup } = useContext(AppContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  function handleGroupCreation(name, color) {
-    addGroup(name, color);
-    setIsModalOpen(false);
-  }
-
-  function closeModal() {
-    setIsModalOpen(false);
-  }
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <div className={styles.sidebar}>
@@ -25,10 +18,15 @@ function Sidebar() {
           <div
             key={index}
             className={styles.groupItem}
-            style={{ backgroundColor: group.color }}
             onClick={() => selectGroup(group)}
           >
-            <div className={styles.groupSymbol}>{group.symbol}</div>
+            <div
+              className={styles.groupSymbol}
+              style={{ backgroundColor: group.color }}
+            >
+              {group.initials}
+            </div>
+            <span className={styles.groupName}>{group.name}</span>
           </div>
         ))}
       </div>
@@ -40,8 +38,8 @@ function Sidebar() {
       />
       {isModalOpen && (
         <Modal
-          onSubmit={handleGroupCreation}
-          onClose={() => setIsModalOpen(false)}
+          onSubmit={addGroup}
+          onClose={closeModal}
         />
       )}
     </div>

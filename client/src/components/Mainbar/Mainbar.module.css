@@ -33,3 +33,169 @@ span {
   font-size: 12px;
   margin-left: 5px;
 }
+.mainBar {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #001f8b;
+}
+
+.groupSymbol {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.groupName {
+  font-size: 20px;
+  margin: 0;
+}
+
+.noteInputWrapper {
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #001f8b;
+}
+
+.textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+.sendButton {
+  transform: translateY(-100%);
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  height: 30px;
+  width: 30px;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.sendIcon {
+  width: 100%;
+  height: 100%;
+}
+
+.notes {
+  flex: 1;
+  margin-bottom: 15px;
+  text-align: left;
+  overflow-y: auto;
+}
+
+.note {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  position: relative;
+}
+
+.timestamp {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 12px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .mainBar {
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    position: relative;
+  }
+
+  .backButton {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .backIcon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .groupSymbol {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .groupName {
+    font-size: 18px;
+  }
+
+  .noteInputWrapper {
+    padding: 10px;
+    background-color: #001f8b;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .textarea {
+    height: 80px;
+    padding: 8px;
+  }
+
+  .sendButton {
+    right: 10px;
+    bottom: 10px;
+    height: 25px;
+    width: 25px;
+    border: none;
+  }
+
+  .notes {
+    margin-bottom: 70px;
+  }
+
+  .note {
+    max-height: 60px;
+  }
+
+  .timestamp {
+    font-size: 10px;
+    right: 5px;
+  }
+}
